@@ -1,0 +1,12 @@
+
+.visContainer{
+  float: left;
+}
+
+.vis{
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 300px;
+}
+
