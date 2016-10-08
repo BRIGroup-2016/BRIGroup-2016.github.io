@@ -88,7 +88,7 @@ body {
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #222d32;
+  background-color: #fff;
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
@@ -177,6 +177,7 @@ body {
 
 /* Layout */
 .wrapper {
+  height: 100%;
   min-height: 100%;
   position: relative;
   overflow: hidden;
@@ -611,6 +612,8 @@ a:focus {
 }
 .sidebar {
   padding-bottom: 10px;
+  height: 700px;
+  background-color: #222d32;
 }
 .sidebar-form input:focus {
   border-color: transparent;
