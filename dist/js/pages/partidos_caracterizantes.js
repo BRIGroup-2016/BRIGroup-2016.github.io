@@ -48832,28 +48832,32 @@ for (key in json) {
 
 $(".dropdown-menu li a").click(function(){
   var selText = $(this).text();
-  createTags(json[selText].caracterizantes)
+  createTags(json[selText].caracterizantes, "#visCaracterizante");
+  createTags(json[selText].descaracterizantes, "#visDescaracterizante");
 });
 
-function createTags(data){
+function createTags(data, div){
     var palavras = new Array();
+
+    
     data.forEach(function(element) {
         //console.log(element);
         palavras.push({"key": element.feature, "value": element.importancia})
     }, this);
-
-    createWordCloud(palavras);
+    createWordCloud(palavras, div);
 }
 
-var palavras=[{"key": "Cat", "value": 26}, {"key": "fish", "value": 19}, {"key": "things", "value": 18}, {"key": "look", "value": 16}, {"key": "two", "value": 15}, {"key": "like", "value": 14}, {"key": "hat", "value": 14}, {"key": "Oh", "value": 13}, {"key": "mother", "value": 12}, {"key": "One", "value": 12}, {"key": "Now", "value": 12}, {"key": "Thing", "value": 12}, {"key": "house", "value": 10}];
-
-function createWordCloud(tags){
-    $("#vis").empty();
+function createWordCloud(tags, div){
+    $(div).empty();
     
     var fill = d3.scale.category20b();
 
-var w = window.innerWidth,
-        h = window.innerHeight;
+var w = 600,
+        h = 300;
+
+//var w = window.innerWidth,
+        //h = window.innerHeight;
+ 
 
 var max,
         fontSize;
@@ -48869,7 +48873,7 @@ var layout = d3.layout.cloud()
         })
         .on("end", draw);
 
-var svg = d3.select("#vis").append("svg")
+var svg = d3.select(div).append("svg")
         .attr("width", w)
         .attr("height", h);
 
@@ -48882,8 +48886,8 @@ window.onresize = function(event) {
 };
 
 function draw(data, bounds) {
-    var w = window.innerWidth,
-        h = window.innerHeight;
+    var w = 600,
+        h = 300;
 
     svg.attr("width", w).attr("height", h);
 
