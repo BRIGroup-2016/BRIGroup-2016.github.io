@@ -613,7 +613,7 @@ a:focus {
 }
 .sidebar {
   padding-bottom: 10px;
-  height: 700px;
+  height: 700px !important;
   background-color: #222d32;
 }
 .sidebar-form input:focus {
