@@ -48850,8 +48850,8 @@ function createTags(data, div){
 function createWordCloud(tags, div){
     $(div).empty();
     
-    var fill = d3.scale.category20b();
-
+    //var fill = d3.interpolateReds()
+    //var fill = d3.scale.category20b();
 var w = 600,
         h = 300;
 
@@ -48925,7 +48925,12 @@ function draw(data, bounds) {
         return d.font;
     })
             .style("fill", function(d) {
-                return fill(d.text.toLowerCase());
+                if(div=='#visCaracterizante'){
+                    return d3.interpolateBlues('0.'+d.size);
+                }else{
+                    return d3.interpolateReds('0.'+d.size);
+                }
+                
             })
             .text(function(d) {
                 return d.text;
