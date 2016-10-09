@@ -48824,17 +48824,18 @@ console.log(json);
 
 var palavras = new Array();
 
-for (key in json) {
-    if (json.hasOwnProperty(key)) {
-        $('#dropdown').append("<li role='presentation'><a role='menuitem' tabindex='-1' >"+key+"</a></li>");
-    }
+for (var key in json) {
+    if(json.hasOwnProperty(key)){
+        $('#comboPart').append("<option>"+key+"</option>");
+    }   
 }  
 
-$(".dropdown-menu li a").click(function(){
-  var selText = $(this).text();
+function comboPartidos(){
+  var selText = document.getElementById("comboPart").value
   createTags(json[selText].caracterizantes, "#visCaracterizante");
   createTags(json[selText].descaracterizantes, "#visDescaracterizante");
-});
+}
+
 
 function createTags(data, div){
     var palavras = new Array();

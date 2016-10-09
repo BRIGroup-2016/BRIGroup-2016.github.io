@@ -8,9 +8,12 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
   
    <link rel="stylesheet" href="../dist/css/pages/partidos_caracterizantes.css">
+   
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,23 +24,59 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+   
 
 </head>
 <body class="container">
-<div class="wrapper">
-  <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Partido
-    <span class="caret"></span></button>
-    <ul id='dropdown' class="dropdown-menu" role="menu" aria-labelledby="menu1">
-    </ul>
-  </div>
-  <div class="visContainer">
-    <div class="vis" id="visCaracterizante"></div>
-    <div class="vis" id="visDescaracterizante"></div>
-  </div>
+
+<div class="row">
+  
+  <div class="form-group">
+      <label>Partidos</label>
+                <select class="form-control select2 select2-hidden-accessible" id="comboPart" style="width: 100%;" tabindex="-1" aria-hidden="true" onchange="comboPartidos()">
+                </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
 </div>
 
+
+<div class="row">
+            <div class="col-md-6">
+              <!-- DIRECT CHAT -->
+              <div class="box">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Palavras Caracterizantes</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body" >
+                  <div class="vis" id="visCaracterizante"></div>
+                </div>
+              
+                <!-- /.box-footer-->
+              </div>
+              <!--/.direct-chat -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-6">
+              <!-- USERS LIST -->
+              <div class="box">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Palavras Descaracterizantes</h3>
+
+                
+                </div>
+                
+                <div class="box-body" >
+                  <div class="vis" id="visDescaracterizante"></div>
+                </div>
+                
+        
+                <!-- /.box-footer -->
+              </div>
+              <!--/.box -->
+            </div>
+            <!-- /.col -->
+          </div>
 
 
 <!-- jQuery 2.2.0 -->
