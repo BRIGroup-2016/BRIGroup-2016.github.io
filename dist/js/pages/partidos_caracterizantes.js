@@ -48827,6 +48827,7 @@ var palavras = new Array();
 for (var key in json) {
     if(json.hasOwnProperty(key)){
         $('#comboPart').append("<option>"+key+"</option>");
+        comboPartidos();
     }   
 }  
 
