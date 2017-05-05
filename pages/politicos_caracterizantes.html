@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Partidos</title>
+  <title>politicos</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
   
-   <link rel="stylesheet" href="../dist/css/pages/partidos_caracterizantes.css">
+   <link rel="stylesheet" href="../dist/css/pages/politicos_caracterizantes.css">
    
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
@@ -32,17 +32,17 @@
 <div class="row">
   
   <div class="form-group">
-      <label>Partidos</label>
-                <select class="form-control select2 select2-hidden-accessible" id="comboPart" style="width: 100%;" tabindex="-1" aria-hidden="true" onchange="comboPartidos()">
+      <label>Políticos</label>
+                <select class="form-control select2 select2-hidden-accessible" id="comboPart" style="width: 100%;" tabindex="-1" aria-hidden="true" onchange="comboPoliticos()">
                 </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
     </div>
 </div>
 
 
 <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12" style="height: 700px;">
               <!-- DIRECT CHAT -->
-              <div class="box">
+              <div class="box" style="height: 100%;">
                 <div class="box-header with-border">
                   <h3 class="box-title">Palavras Caracterizantes</h3>
                 </div>
@@ -57,14 +57,12 @@
             </div>
             <!-- /.col -->
 
-            <div class="col-md-6">
+            <div class="col-md-12" style="height: 700px;">
               <!-- USERS LIST -->
-              <div class="box">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Palavras Descaracterizantes</h3>
-
-                
-                </div>
+                <div class="box" style="height: 100%;">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Palavras Descaracterizantes</h3>
+                    </div>
                 
                 <div class="box-body" >
                   <div class="vis" id="visDescaracterizante"></div>
@@ -92,6 +90,11 @@
 <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <!-- My JS -->
+<script src="../dist/js/data/politicos-modelo.js"></script>
+<script src="../dist/js/data/politicos-nome_features.js"></script>
+<script src="../dist/js/data/politicos-nome_categorias.js"></script>
+
 <script src="../dist/js/pages/politicos_caracterizantes.js"></script>
+
 </body>
 </html>
