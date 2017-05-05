@@ -100,10 +100,10 @@ function sort(a,b){ return d3.ascending(sortOrder.indexOf(a),sortOrder.indexOf(b
 
 var ch = viz.ch().data(data)
       .padding(.01)
-      .sort(sort)
+      // .sort(sort)
 	  .innerRadius(300)
 	  .outerRadius(320)
-	  .duration(1000)
+	  .duration(500)
 	  .chordOpacity(0.3)
 	  .labelPadding(.03)
       .fill(function(d){ return colors[d];});
