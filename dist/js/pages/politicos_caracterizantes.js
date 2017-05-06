@@ -9,6 +9,11 @@ function comboPoliticos(){
     createTags(politicoId, "#visDescaracterizante");
 }
 
+$(document).ready(function() {
+    $("select").select2();
+});
+
+
 function createTags(politicoId, div){
     var words = [];
 

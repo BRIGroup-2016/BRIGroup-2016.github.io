@@ -7,6 +7,10 @@ for (var i in nomes_clusters) {
     $('#comboPart').append("<option>"+clusterPartido+"</option>");
 }
 
+$(document).ready(function() {
+    $("select").select2();
+});
+
 function comboClusterPartidos(){
     var clusterPartidoId = document.getElementById("comboPart").selectedIndex;
     createTags(clusterPartidoId, "#visCaracterizante");

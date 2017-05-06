@@ -3,6 +3,10 @@ for (var i in partidos) {
     $('#comboPart').append("<option id='" + i + "'>"+partido+"</option>");
 }
 
+$(document).ready(function() {
+    $("select").select2();
+});
+
 function comboPartidos(){
     var partidoId = document.getElementById("comboPart").selectedIndex;
     createTags(partidoId, "#visCaracterizante");
