@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Politicos</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  
+   <link rel="stylesheet" href="../dist/css/pages/politicos_caracterizantes.css">
+   
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+
+</head>
+<body class="container">
+
+<div class="row col-md-6">
+  
+  <div class="form-group">
+      <label>Por Clusters</label>
+      <select class="form-control select2 select2-hidden-accessible" id="comboPart" style="width: 100%;" tabindex="-1" aria-hidden="true" onchange="comboClusterPoliticos()">
+      </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+      <label>Por Politicos</label>
+      <select class="form-control select2 select2-hidden-accessible" id="comboPoliticos" style="width: 100%;" tabindex="-1" aria-hidden="true" onchange="comboPolitico()">
+                </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style="width: 100%;"><span class="selection"></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="box" style="height: 100%;">
+            <div class="box-header with-border">
+                <h3 class="box-title">Componentes</h3>
+            </div>
+            <div class="box-body" >
+                <ul id="listaCluster">
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-12" style="height: 700px;">
+          <!-- DIRECT CHAT -->
+          <div class="box" style="height: 100%;">
+            <div class="box-header with-border">
+              <h3 class="box-title">Palavras Caracterizantes</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body" >
+              <div class="vis" id="visCaracterizante"></div>
+            </div>
+
+            <!-- /.box-footer-->
+          </div>
+          <!--/.direct-chat -->
+        </div>
+        <!-- /.col -->
+
+        <div class="col-md-12" style="height: 700px;">
+          <!-- USERS LIST -->
+            <div class="box" style="height: 100%;">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Palavras Descaracterizantes</h3>
+                </div>
+
+            <div class="box-body" >
+              <div class="vis" id="visDescaracterizante"></div>
+            </div>
+
+
+            <!-- /.box-footer -->
+          </div>
+          <!--/.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+
+
+<!-- jQuery 2.2.0 -->
+<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- D3.js -->
+<script src="../plugins/d3/d3.min.js"></script>
+<!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+<script src="../plugins/d3/d3.layout.cloud.js"></script>
+<!--D3 Color Scales -->
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<!-- My JS -->
+<script src="../dist/js/data/politicos-modelo.js"></script>
+<script src="../dist/js/data/politicos-nome_features.js"></script>
+<script src="../dist/js/data/politicos-nome_categorias.js"></script>
+<script src="../dist/js/data/clusters_politicos.js"></script>
+
+<script src="../dist/js/pages/cluster_politico_caracterizantes.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+</body>
+</html>
