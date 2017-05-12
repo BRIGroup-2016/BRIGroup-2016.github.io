@@ -33,7 +33,7 @@ var partidos = ['DEM', 'PCDOB', 'PDT', 'PHS', 'PMB', 'PMDB', 'PP', 'PPS', 'PR', 
 var data = new Array();
 
 for(var i = 0; i < partidos.length; i++){
-	console.log("teste i :" + i);
+	//console.log("teste i :" + i);
 	for(var j=0; j < partidos.length;j++){
 		var arr = new Array();
 		arr.push(partidos[i]);
