@@ -206,7 +206,7 @@ body {
  * ```.right-side has been deprecated as of v2.0.0 in favor of .content-wrapper  ```
  */
 
-.content-wrapper{
+.divizona{
     overflow-y: scroll;
     height: 100%;
 }
@@ -252,7 +252,7 @@ body {
 }
 .content-wrapper,
 .right-side {
-  min-height: 100%;
+  /*min-height: 100%;*/
   background-color: #ecf0f5;
   z-index: 800;
 }
