@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="principal">
+<meta charset="utf-8">
+<title>Mapa de calor de similaridade de Políticos</title>
+<style>
+@import url(../dist/css/pages/heatmapStyle.css);
+
+.cell {
+	stroke: LightGrey;
+	stroke-width: 1;
+}
+
+text.active {
+	fill: red;
+}
+</style>
+<script src="../dist/js/data/politicos-nome_categorias.js"></script>
+<script src="../dist/js/data/clusters_politicos.js"></script>
+<script src="../dist/js/data/politicos_similaridade.js"></script>
+
+<!--<script src="../dist/js/data/miserables.js"></script>-->
+<script src="../dist/js/libs/d3.v2.min.js"></script>
+<body style="align-content: center">
+	<aside style="margin-top: 20px;">
+		<p>
+			Ordenação:
+			<select id="order">
+				<option value="name">por Nome</option>
+				<option value="group">por Cluster</option>
+			</select>
+		<p>
+
+	</aside>
+</body>
+<script src="../dist/js/pages/heatmap_politicos.js"></script>
+
+
