@@ -6,10 +6,15 @@ for(var i = 0; i < politicos.length; i++){
 		var arr = new Array();
 		arr.push(politicos[i]);
 		arr.push(politicos[j]);
-		arr.push(model[i][j] + 2);
+		if(similaridades_politicos[i][j]<0 || i==j){
+			arr.push(0);
+		}else{
+			arr.push(Math.log(similaridades_politicos[i][j] + 1));
+		}
 		data.push(arr);
 	}
 }
+
 
 console.log(data);
 
