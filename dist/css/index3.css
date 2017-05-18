@@ -82,3 +82,8 @@ a.title{
     letter-spacing: 1px;
     text-decoration: none;
 }
+
+.sobre p{
+	font-size: 17px;
+    text-align: justify;
+}
